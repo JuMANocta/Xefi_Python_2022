@@ -4,7 +4,9 @@ from Controller import nbcars_nbplacesvides
 class Gui_probleme:
     def __init__(self, parent):
         self.parent = parent
-        self.parent.geometry("200x200")
+        self.parent.title("Problème des cars")
+        self.parent.iconbitmap("./img/autobus.ico")
+        self.parent.geometry("300x300")
         self.frame = Frame(parent)
         self.interfaceGUI()
         self.packGUI()
@@ -18,6 +20,9 @@ class Gui_probleme:
         self.enNbPlacesCars = Entry(self.frame)
         self.retourBtn = Button(self.frame, text="Calcul", command=self.calcul)
         self.labNbCars = Label(self.frame, text="Nombre de cars")
+        self.photo = PhotoImage(file="./img/autobus.png")
+        self.canvas = Canvas(self.frame, width=100, height=100)
+        self.canvas.create_image(50, 50, image=self.photo)
 
     def packGUI(self):
         self.frame.pack()
@@ -29,6 +34,7 @@ class Gui_probleme:
         self.enNbPlacesCars.pack()
         self.retourBtn.pack()
         self.labNbCars.pack()
+        self.canvas.pack()
 
     def calcul(self):
         try:
