@@ -1,5 +1,5 @@
 from tkinter import *
-
+from Controller import nbcars_nbplacesvides
 
 class Gui_probleme:
     def __init__(self, parent):
@@ -32,9 +32,9 @@ class Gui_probleme:
 
     def calcul(self):
         try:
-            nb_eleve = int(self.enNbEleves.get())
-            nb_adulte = int(self.enNbAdultes.get())
-            nb_place = int(self.enNbPlacesCars.get())
-            self.labNbCars.config(text="test", fg="green")
+            nb_eleves = int(self.enNbEleves.get())
+            nb_adultes = int(self.enNbAdultes.get())
+            nb_places = int(self.enNbPlacesCars.get())
+            self.labNbCars.config(text=nbcars_nbplacesvides.NbCars_nbPlacesVides(nb_eleves,nb_adultes,nb_places), fg="green")
         except:
             self.labNbCars.config(text="Erreur de saisie", fg="red")
