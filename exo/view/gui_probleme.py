@@ -32,8 +32,3 @@ retourBtn.pack()
 labNbCars.pack()
 
 fen.mainloop()
-
-if __name__ == "__main__":
-    print("ici")
-    from probleme import NbCars_nbPlacesVides
-    fen.mainloop()
