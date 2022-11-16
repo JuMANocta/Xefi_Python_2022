@@ -18,5 +18,4 @@ def nb_places_vides(nb_eleves, nb_adultes, nb_places):
     nb_cars = ceil((nb_eleves + nb_adultes) / nb_places)
     nb_places_vides = nb_cars * nb_places - (nb_eleves + nb_adultes)
     return nb_places_vides
-
 print("Il reste", nb_places_vides(nb_eleves,nb_adultes,nb_places), "places vides")
